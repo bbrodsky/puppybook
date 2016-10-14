@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 
 export default class SinglePuppy extends Component {
 
+  // console.log("singlePuppy", singlePuppy);
+
   render () {
+
+    const {singlePuppy} = this.props;
+
     return (
       <div>
-        <h2>PUPPY NAME GOES HERE</h2>
+        <h2>{singlePuppy.name}</h2>
         <div>
-          <img src="http://placehold.it/400x400" />
+          <img src={singlePuppy.image} />
         </div>
       </div>
     )
