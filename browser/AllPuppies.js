@@ -2,16 +2,14 @@ import React from 'react';
 
 export default class AllPuppies extends React.Component {
 
-  componentDidMount () {
-    this.props.loadAllPuppies();
-  }
+  // componentDidMount () {
+  //   this.props.loadAllPuppies();
+  // }
 
   render () {
 
     const {allPuppies} = this.props;
 
-    // console.log("this.props", this.props);
-    // console.log("allPuppies", allPuppies);
     return (
       <div> YO DUDE
         <ul className="list-unstyled">

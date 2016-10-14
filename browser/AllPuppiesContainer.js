@@ -1,22 +1,18 @@
 import { connect } from "react-redux";
 import AllPuppies from "./AllPuppies.js";
-import {receivePuppies} from "./action-creators.js";
+// import {getPuppies} from "./action-creators.js";
 
-const hardCodedData = [
-  { id: 1, name: 'Cody' },
-  { id: 2, name: 'Ben' },
-  { id: 3, name: 'Bubba' }
-];
 
 const mapStateToProps = (state, ownProps ) => ({
   allPuppies: state.allPuppies
 });
 
-const mapDispatchToProps = (dispatch) =>
+// const mapDispatchToProps = (dispatch) => ({
+//   loadAllPuppies: () => dispatch(getPuppies())
+// })
 
-  ({
-    loadAllPuppies: () => dispatch(receivePuppies(hardCodedData))
-  })
-
-const AllPuppiesContainer = connect(mapStateToProps, mapDispatchToProps);
+const AllPuppiesContainer = connect(
+  mapStateToProps
+  // ,mapDispatchToProps
+);
 export default AllPuppiesContainer(AllPuppies);

@@ -9,4 +9,19 @@ export const receivePuppies = (puppies) =>
     }
   );
 
+// export const getPuppies = () =>
+//   dispatch => {
+//     fetch('/api/puppies')
+//     .then(e => e.json())
+//     .then(res => dispatch(receivePuppies(res)))
+//   }
 
+
+export function getPuppies() {
+  return function (dispatch) {
+    fetch('/api/puppies')
+    .then(e => e.json())
+    .then(res => dispatch(receivePuppies(res)))
+    .catch(console.error)
+  }
+}
